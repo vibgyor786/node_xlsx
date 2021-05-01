@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
  
 
   
-  const file = xlsx.readFile("filename.xlsx");
+  const file = xlsx.readFile("Filename.xlsx");
   let data = []
   const sheets = file.SheetNames;
   for (let i = 0; i < sheets.length; i++) {
@@ -54,7 +54,7 @@ router.post("/", function (req, res, next) {
 });
 
 router.get("/index1.ejs", function (req, res, next) {
-  const file = xlsx.readFile("filename.xlsx");
+  const file = xlsx.readFile("Filename.xlsx");
   let data = []
   const sheets = file.SheetNames;
   for (let i = 0; i < sheets.length; i++) {
@@ -74,7 +74,7 @@ router.get("/index1.ejs", function (req, res, next) {
   res.render('index1.ejs',{data:data,details:jsn});
 });
 router.post("/index1.ejs/output", function (req, res, next) {
-  const file = xlsx.readFile("filename.xlsx");
+  const file = xlsx.readFile("Filename.xlsx");
   let data = []
   const sheets = file.SheetNames;
   for (let i = 0; i < sheets.length; i++) {
