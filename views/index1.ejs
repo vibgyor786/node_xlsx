@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>hhh</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">DEMO</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/">Page 1</a></li>
+            <li><a href="/index1.ejs">Page 2</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    
+      <form class="form-check formlay" action="/index1.ejs/output" method="POST">
+        
+        <label class="name"for="name">Dear:</label>
+        <input class="fill_name" type="text" name="first_name">
+          <button  type="submit" class="btn btn-primary mb-2 btnx">Refresh</button>
+          
+        
+        
+      
+      
+      <div class="form-group">
+        <label class="textarea"for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="textarea"rows="3"></textarea>
+      </div>
+
+      <select class="form-select option" name="type" aria-label="Default select example">
+        
+        <% for(var i=0; i < data.length; i++) { %>
+            <option value=<%= data[i].link %>><tr>
+              </td><%= data[i].name %></td>
+             
+              
+            </tr>
+        </option>
+            <% } %>
+      </select>
+
+      
+      <div class="form-check form-check-inline ">
+        <input class="form-check-input" type="radio" name="thanks" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">Add thanks</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="date" id="inlineRadio2" value="1">
+        <label class="form-check-label" for="inlineRadio2">Add date</label>
+      </div>
+    
+      
+    </form>
+    
+    <div class="output"><H3>OUTPUT</H3>
+      <% if(details.date==1) { %>
+        <div>DATE:
+        <span class="currDate"></span>
+      </div>
+        <% } %>
+    
+    <div><%= details.greet %> <span><%= details.name %></span></div>
+    <div><%= details.text%></div>
+    
+      
+     
+    <div><p><%= details.option %> <%= details.link %></p></div>
+    
+    <% if(details.thanks==1) { %>
+        <div>Thanks, </div>
+        <div><%= details.name %> </div>
+        <% } %>
+
+      </div>
+  </body>
+  <script type="text/javascript">
+    let currDate =
+        new Date().toLocaleDateString('en-GB');
+          
+    let inputDate = new Date();
+
+    document.querySelector('.currDate').textContent
+            = currDate;
+              
+    
+</script>
+
+  
+ 
+</html>

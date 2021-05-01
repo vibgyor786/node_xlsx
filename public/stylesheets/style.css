@@ -1,0 +1,66 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+
+.table {
+ margin-top: 2%;
+}
+
+ .form-inline{
+  margin-left: 32%;
+}
+.heading{
+  margin-top: 4%;
+  margin-left: 46%;
+}
+.name{
+  margin-left: 26%;
+  font-size: 20px;
+}
+
+.fill_name{
+    margin-left: 1%;
+    padding: 0.5%;
+}
+.textarea{
+  margin-top: 2%;
+  margin-left: 35%;
+  font-size: 20px;
+}
+.form-check {
+  display: inline-block;
+}
+
+.formlay{
+  margin-left: 26%;
+  width: 50%;
+}
+.btnx{
+  margin-left: 2%;
+}
+.option{
+  margin-left: 26%;
+  margin-top: 1%;
+  padding: 0.5%;
+  border-radius: 0%;
+}
+.output {
+  margin-top:20px ;
+  width:100%;
+  height: 45vh;
+  border: 2px solid black;
+  border-radius: 2%;
+  background-color: rgba(214, 217, 219, 0.26);
+}
+.output h3{
+  margin: 0rem 67rem;
+}
+.output div{
+  margin: 25px 0px;
+  text-align: center;
+  font-size: 1.8rem;
+
+}
